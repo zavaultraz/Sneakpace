@@ -293,7 +293,7 @@ class SignUpPages extends StatelessWidget {
     );
   }
 
-  Widget signUpOptions(BuildContext context) {
+  Widget googleOption() {
     return Container(
       height: 50,
       decoration: BoxDecoration(
@@ -302,60 +302,19 @@ class SignUpPages extends StatelessWidget {
       ),
       child: Center(
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween, // Mengatur ruang antar dua elemen
           children: [
-            // Opsi Google
-            Container(
-              width: (MediaQuery.of(context).size.width - 48) / 2, // Membuat lebar setengah dari layar minus padding
-              decoration: BoxDecoration(
-                color: backgroundColor4, // Bisa diganti warna
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center, // Mengatur ikon dan teks berada di tengah
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Image.asset(
-                      'assets/google.png',
-                      width: 25,
-                    ),
-                  ),
-                  SizedBox(width: 16),
-                  Expanded(
-                    child: Text(
-                      'Google',
-                      style: primaryTextStyle, // Gaya teks, sesuaikan
-                    ),
-                  ),
-                ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'assets/google.png', // Ganti dengan path ikon Google
+                width: 25,
               ),
             ),
-            // Opsi Facebook
-            Container(
-              width: (MediaQuery.of(context).size.width - 48) / 2, // Lebar yang sama dengan opsi pertama
-              decoration: BoxDecoration(
-                color: backgroundColor4, // Bisa diganti warna
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center, // Mengatur ikon dan teks berada di tengah
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Image.asset(
-                      'assets/facebook.png', // Ganti dengan ikon Facebook
-                      width: 25,
-                    ),
-                  ),
-                  SizedBox(width: 16),
-                  Expanded(
-                    child: Text(
-                      'Facebook',
-                      style: primaryTextStyle, // Gaya teks, sesuaikan
-                    ),
-                  ),
-                ],
+            SizedBox(width: 16),
+            Expanded(
+              child: Text(
+                'Google',
+                style: primaryTextStyle, // Gaya teks untuk Google
               ),
             ),
           ],
@@ -363,6 +322,37 @@ class SignUpPages extends StatelessWidget {
       ),
     );
   }
+
+  Widget facebookOption() {
+    return Container(
+      height: 50,
+      decoration: BoxDecoration(
+        color: backgroundColor4, // Sesuaikan dengan warna latar belakang
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Center(
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'assets/facebook.png', // Ganti dengan path ikon Facebook
+                width: 25,
+              ),
+            ),
+            SizedBox(width: 16),
+            Expanded(
+              child: Text(
+                'Facebook',
+                style: primaryTextStyle, // Gaya teks untuk Facebook
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
 
 
   @override
@@ -380,7 +370,13 @@ class SignUpPages extends StatelessWidget {
             emailInput(),
             passwordInput(),
             buttonSubmit(context),
-            signUpOptions(context),
+            Column(
+              children: [
+                googleOption(),
+                SizedBox(height: 16), // Jarak antara Google dan Facebook
+                facebookOption(),
+              ],
+            ),
             Spacer(),
             footer(context),
           ],
