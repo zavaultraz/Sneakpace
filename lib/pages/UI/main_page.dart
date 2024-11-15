@@ -49,13 +49,16 @@ class _MainPagesState extends State<MainPages> {
         notchMargin: 12,
         color: backgroundColor4,
         child: BottomNavigationBar(
-          backgroundColor: backgroundColor4,
+          elevation: 0,
+          backgroundColor: Colors.transparent,
           type: BottomNavigationBarType.fixed,
           onTap: (value){
             setState(() {
               currentIndex = value;
             });
           },
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
           selectedItemColor: Colors.grey, // Warna ikon saat dipilih
           unselectedItemColor: Colors.grey, // Warna ikon saat tidak dipilih
           selectedLabelStyle: TextStyle(

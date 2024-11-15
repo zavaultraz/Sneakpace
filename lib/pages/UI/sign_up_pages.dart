@@ -293,65 +293,71 @@ class SignUpPages extends StatelessWidget {
     );
   }
 
-  Widget googleOption() {
-    return Container(
-      height: 50,
-      decoration: BoxDecoration(
-        color: backgroundColor4, // Sesuaikan dengan warna latar belakang
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Center(
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                'assets/google.png', // Ganti dengan path ikon Google
-                width: 25,
+
+
+  Widget Option() {
+    return Column(  // Gunakan Column agar kedua opsi ditampilkan secara vertikal
+      children: [
+        // Container untuk Facebook
+        Container(
+          height: 50,
+          decoration: BoxDecoration(
+            color: backgroundColor4, // Sesuaikan dengan warna latar belakang
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset(
+                  'assets/facebook.png', // Ganti dengan path ikon Facebook
+                  width: 25,
+                ),
               ),
-            ),
-            SizedBox(width: 16),
-            Expanded(
-              child: Text(
-                'Google',
-                style: primaryTextStyle, // Gaya teks untuk Google
+              SizedBox(width: 16),
+              Expanded(
+                child: Text(
+                  'Facebook',
+                  style: primaryTextStyle, // Gaya teks untuk Facebook
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
+
+        // Memberikan jarak antar container
+        SizedBox(height: 16),
+
+        // Container untuk Google
+        Container(
+          height: 50,
+          decoration: BoxDecoration(
+            color: backgroundColor4, // Sesuaikan dengan warna latar belakang
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset(
+                  'assets/google.png', // Ganti dengan path ikon Google
+                  width: 25,
+                ),
+              ),
+              SizedBox(width: 16),
+              Expanded(
+                child: Text(
+                  'Google',
+                  style: primaryTextStyle, // Gaya teks untuk Google
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 
-  Widget facebookOption() {
-    return Container(
-      height: 50,
-      decoration: BoxDecoration(
-        color: backgroundColor4, // Sesuaikan dengan warna latar belakang
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Center(
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                'assets/facebook.png', // Ganti dengan path ikon Facebook
-                width: 25,
-              ),
-            ),
-            SizedBox(width: 16),
-            Expanded(
-              child: Text(
-                'Facebook',
-                style: primaryTextStyle, // Gaya teks untuk Facebook
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 
 
 
@@ -370,13 +376,8 @@ class SignUpPages extends StatelessWidget {
             emailInput(),
             passwordInput(),
             buttonSubmit(context),
-            Column(
-              children: [
-                googleOption(),
-                SizedBox(height: 16), // Jarak antara Google dan Facebook
-                facebookOption(),
-              ],
-            ),
+            SizedBox(height: 14,),
+            Option(),
             Spacer(),
             footer(context),
           ],
