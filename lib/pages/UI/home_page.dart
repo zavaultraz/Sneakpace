@@ -147,19 +147,42 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  Widget NewArivalProductTitle() {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 20),
+      child: Text(
+        'New Arrival',
+        style: primaryTextStyle.copyWith(fontSize: 22, fontWeight: semiBold),
+      ),
+    );
+  }
+
   Widget PopularProduct() {
     return Container(
-        margin: EdgeInsets.symmetric(horizontal: 20),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: [
-              ProductCard(),
-              ProductCard(),
-              ProductCard(),
-            ],
-          ),
+      margin: EdgeInsets.symmetric(horizontal: 20),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            ProductCard(),
+            ProductCard(),
+            ProductCard(),
+          ],
         ),
+      ),
+    );
+  }
+
+  Widget NewArrivalProduct(){
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+      child: Column(
+        children: [
+          ProductTitle(),
+          ProductTitle(),
+          ProductTitle(),
+        ],
+      ),
     );
   }
 
@@ -177,8 +200,15 @@ class HomePage extends StatelessWidget {
             height: 15,
           ),
           PopularProductTitle(),
-          const SizedBox(height: 15,),
+          const SizedBox(
+            height: 15,
+          ),
           PopularProduct(),
+          SizedBox(
+            height: 15,
+          ),
+          NewArivalProductTitle(),
+          NewArrivalProduct(),
         ],
       ),
     );

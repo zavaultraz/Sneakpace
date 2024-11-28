@@ -107,7 +107,6 @@ class SignUpPages extends StatelessWidget {
     );
   }
 
-
   Widget emailInput() {
     return Container(
       margin: EdgeInsets.only(top: 20, left: 10),
@@ -293,73 +292,75 @@ class SignUpPages extends StatelessWidget {
     );
   }
 
-
-
-  Widget Option() {
-    return Column(  // Gunakan Column agar kedua opsi ditampilkan secara vertikal
-      children: [
-        // Container untuk Facebook
-        Container(
-          height: 50,
-          decoration: BoxDecoration(
-            color: backgroundColor4, // Sesuaikan dengan warna latar belakang
-            borderRadius: BorderRadius.circular(12),
-          ),
+  Widget OptionText(){
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset(
-                  'assets/facebook.png', // Ganti dengan path ikon Facebook
-                  width: 25,
-                ),
-              ),
-              SizedBox(width: 16),
-              Expanded(
-                child: Text(
-                  'Facebook',
-                  style: primaryTextStyle, // Gaya teks untuk Facebook
-                ),
-              ),
+              Text('-------------',style: subtitleTextStyle,),
+              SizedBox(width: 10,),
+              Text(' Daftar Menggunakan ',style: subtitleTextStyle.copyWith(fontWeight: semiBold),),
+              Text('-------------',style: subtitleTextStyle,),
             ],
           ),
-        ),
-
-        // Memberikan jarak antar container
-        SizedBox(height: 16),
-
-        // Container untuk Google
-        Container(
-          height: 50,
-          decoration: BoxDecoration(
-            color: backgroundColor4, // Sesuaikan dengan warna latar belakang
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset(
-                  'assets/google.png', // Ganti dengan path ikon Google
-                  width: 25,
-                ),
-              ),
-              SizedBox(width: 16),
-              Expanded(
-                child: Text(
-                  'Google',
-                  style: primaryTextStyle, // Gaya teks untuk Google
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
+      ),
     );
   }
 
-
-
+  Widget Option() {
+    return Container(
+      margin: EdgeInsets.only(top: 10, left: 10,right: 10),
+      child: Row(
+        children: [
+          Container(
+            width: 180,
+            padding: EdgeInsets.all(8.0),
+            decoration: BoxDecoration(
+              color: backgroundColor4,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Center(
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/facebook.png',
+                    width: 30,
+                  ),
+                  SizedBox(width: 7,),
+                  Text('Facebook',style: primaryTextStyle.copyWith(fontWeight: semiBold,fontSize: 17),)
+                ],
+              ),
+            ),
+          ),
+          SizedBox(width: 20,),
+          Container(
+            width: 190,
+            decoration: BoxDecoration(
+              color: backgroundColor4,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Center(
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'assets/google.png',
+                      width: 30,
+                    ),
+                    SizedBox(width: 7,),
+                    Text('Google',style: primaryTextStyle.copyWith(fontWeight: semiBold,fontSize: 17),)
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -376,7 +377,10 @@ class SignUpPages extends StatelessWidget {
             emailInput(),
             passwordInput(),
             buttonSubmit(context),
-            SizedBox(height: 14,),
+            SizedBox(
+              height: 14,
+            ),
+            OptionText(),
             Option(),
             Spacer(),
             footer(context),
