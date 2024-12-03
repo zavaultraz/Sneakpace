@@ -134,10 +134,31 @@ class DetailChatPage extends StatelessWidget {
        padding: const EdgeInsets.all(8.0),
        child: ListView(
           children: [
-            ChatBuble(),
-            ChatBuble(),
-            ChatBuble(),
-            ChatBuble(),
+            ChatBuble(
+              text: 'Product nya ready min',
+              isSender: true,
+              hasProduct: true,
+            ),
+            ChatBuble(
+              text: 'ukuran 40',
+              isSender: false,
+            ),
+            ChatBuble(
+              text: 'ukuran 40',
+              isSender: true,
+            ),
+            ChatBuble(
+              text: 'kosong gan kalo ukuran 40',
+              isSender : false
+            ),
+            ChatBuble(
+              text: 'Warna hitam ukuran 41 ready min ?',
+              isSender: true,
+            ),
+            ChatBuble(
+              text: 'Sebentar saya cek stok dulu gan',
+              isSender: false,
+            )
           ],
         ),
      );
