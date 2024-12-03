@@ -46,7 +46,7 @@ class ChatPage extends StatelessWidget {
       body: ListView(
         children: [
           Header(),
-          noMessage()
+         Message(),
         ],
       ),
     );

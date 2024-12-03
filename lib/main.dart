@@ -22,7 +22,7 @@ class MainPage extends StatelessWidget {
         '/sign-up' : (context)=>SignUpPages(),
         '/main' : (context)=>MainPage(),
         '/main-page' : (context) => MainPages(),
-
+        '/detail-chat' : (context) => DetailChatPage(),
 
       },
     );

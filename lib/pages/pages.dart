@@ -14,3 +14,4 @@ part 'UI/main_page.dart';
 part 'UI/profile_page.dart';
 part 'UI/chat_page.dart';
 part 'UI/wishlist_page.dart';
+part 'UI/detail_chat_page.dart';
