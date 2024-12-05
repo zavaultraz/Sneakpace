@@ -23,6 +23,7 @@ class MainPage extends StatelessWidget {
         '/main' : (context)=>MainPage(),
         '/main-page' : (context) => MainPages(),
         '/detail-chat' : (context) => DetailChatPage(),
+        '/edit-profile' : (context) => EditProfile(),
 
       },
     );

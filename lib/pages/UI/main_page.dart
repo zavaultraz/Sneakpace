@@ -16,7 +16,7 @@ class _MainPagesState extends State<MainPages> {
       case 0:return HomePage();
       case 1:return ChatPage();
       case 2:return WishlistPage();
-      case 3:return HomePage();
+      case 3:return ProfilePage();
       case 4 : return ProfilePage();
       default : return HomePage();
 
