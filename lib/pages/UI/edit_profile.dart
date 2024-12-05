@@ -7,7 +7,22 @@ class EditProfile extends StatelessWidget {
   Widget build(BuildContext context) {
 
     Widget Content(){
-      return Container();
+      return Container(
+        width: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: CircleAvatar(
+                radius: 85,
+                child: Image.asset('assets/org.png',),
+              ),
+            ),
+            Text('El Users',style:primaryTextStyle.copyWith(fontWeight: semiBold,fontSize: 30),)
+          ],
+        ),
+      );
     }
 
     PreferredSizeWidget header() {
