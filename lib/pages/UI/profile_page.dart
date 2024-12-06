@@ -38,9 +38,44 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 40,
+                    backgroundImage: AssetImage('assets/image_profile.png'),
+                  ),
+                  SizedBox(
+                    width: 17,
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Kairi Risol',
+                          style: primaryTextStyle.copyWith(
+                              fontWeight: semiBold, fontSize: 24),
+                        ),
+                        Text(
+                          'kairi@gmail.com',
+                          style: subtitleTextStyle.copyWith(
+                              fontWeight: semiBold, fontSize: 20),
+                        ),
+                      ],
+                    ),
+                  ),
+                  GestureDetector(onTap: (){},child: Icon(Icons.exit_to_app_rounded,color: Colors.red,size: 35,))
+                ],
+              ),
+              SizedBox(height: 12,),
+              Divider(
+                thickness: 2,
+                color: Colors.white,
+              ),
+              SizedBox(height: 10,),
               Text('Account',
                   style: primaryTextStyle.copyWith(
-                      fontSize: 22, fontWeight: semiBold)),
+                      fontSize: 18, fontWeight: semiBold)),
               GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/edit-profile');
@@ -63,10 +98,13 @@ class ProfilePage extends StatelessWidget {
                 onTap: () {},
                 child: MenuContent('Setting'),
               ),
-              SizedBox(height: 20,),
-              Text('General',
-                  style: primaryTextStyle.copyWith(
-                      fontSize: 22, fontWeight: semiBold),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                'General',
+                style: primaryTextStyle.copyWith(
+                    fontSize: 22, fontWeight: semiBold),
               ),
               GestureDetector(
                 onTap: () {},
@@ -75,15 +113,15 @@ class ProfilePage extends StatelessWidget {
               GestureDetector(
                 onTap: () {},
                 child: MenuContent('Term of service'),
-              ),GestureDetector(
+              ),
+              GestureDetector(
                 onTap: () {},
                 child: MenuContent('Rate App'),
-              ),GestureDetector(
-                onTap: () {
-                },
+              ),
+              GestureDetector(
+                onTap: () {},
                 child: MenuContent('Help Center'),
               ),
-
             ],
           ),
         ),

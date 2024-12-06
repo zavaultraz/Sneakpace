@@ -129,6 +129,76 @@ class SignInPage extends StatelessWidget {
     );
   }
 
+  Widget OptionText(){
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('-------------',style: subtitleTextStyle,),
+            SizedBox(width: 10,),
+            Text(' Masuk Menggunakan ',style: subtitleTextStyle.copyWith(fontWeight: semiBold),),
+            Text('-------------',style: subtitleTextStyle,),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget Option() {
+    return Container(
+      margin: EdgeInsets.only(top: 10, left: 10,right: 10),
+      child: Row(
+        children: [
+          Container(
+            width: 180,
+            padding: EdgeInsets.all(8.0),
+            decoration: BoxDecoration(
+              color: backgroundColor4,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Center(
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/facebook.png',
+                    width: 30,
+                  ),
+                  SizedBox(width: 7,),
+                  Text('Facebook',style: primaryTextStyle.copyWith(fontWeight: semiBold,fontSize: 17),)
+                ],
+              ),
+            ),
+          ),
+          SizedBox(width: 20,),
+          Container(
+            width: 190,
+            decoration: BoxDecoration(
+              color: backgroundColor4,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Center(
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'assets/google.png',
+                      width: 30,
+                    ),
+                    SizedBox(width: 7,),
+                    Text('Google',style: primaryTextStyle.copyWith(fontWeight: semiBold,fontSize: 17),)
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget buttonSubmit(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(4.0),
@@ -194,6 +264,8 @@ class SignInPage extends StatelessWidget {
             emailInput(),
             passwordInput(),
             buttonSubmit(context),
+            OptionText(),
+            Option(),
             Spacer(
             ),
             footer(context),

@@ -1,5 +1,6 @@
 import 'package:e_shop/shared/shared.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 part 'chat_card.dart';

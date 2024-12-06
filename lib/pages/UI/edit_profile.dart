@@ -6,6 +6,103 @@ class EditProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    Widget ButtonUpdate(){
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Container(
+          width: double.infinity,
+          margin: EdgeInsets.only(top: 30),
+          padding: EdgeInsets.symmetric(vertical: 12,horizontal: 20),
+          decoration: BoxDecoration(
+            color: primaryColor,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Text('Update',style: primaryTextStyle.copyWith(fontSize: 18,color: Colors.white,fontWeight: semiBold,),textAlign: TextAlign.center,),
+        ),
+      );
+    }
+
+    Widget EmailInput(){
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Container(
+          width: double.infinity,
+          margin: EdgeInsets.only(top: 14),
+          padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+          decoration: BoxDecoration(color: backgroundColor4,borderRadius: BorderRadius.circular(12)),
+          child: TextFormField(
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              hintStyle: primaryTextStyle,
+              hintText: 'kairi@gmail.com',
+              fillColor: backgroundColor4,
+              filled: true,
+              icon: Icon(Icons.mail_outline_rounded,color: Colors.white,size: 28,),
+            ),
+            style: primaryTextStyle.copyWith(
+              fontWeight: semiBold,
+              fontSize: 18,
+              color: Colors.white
+            ),
+          ),
+        ),
+      );
+    }
+
+    Widget UsernameInput(){
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Container(
+          width: double.infinity,
+          margin: EdgeInsets.only(top: 15),
+          padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+          decoration: BoxDecoration(color: backgroundColor4,borderRadius: BorderRadius.circular(12)),
+          child: TextFormField(
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              hintStyle: primaryTextStyle,
+              hintText: 'El Users',
+              fillColor: backgroundColor4,
+              filled: true,
+              icon: Icon(Icons.info_outline,color: Colors.white,size: 28,),
+            ),
+            style: primaryTextStyle.copyWith(
+                fontWeight: semiBold,
+                fontSize: 18,
+                color: Colors.white
+            ),
+          ),
+        ),
+      );
+    }
+
+    Widget nameInput(){
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Container(
+          width: double.infinity,
+          margin: EdgeInsets.only(top: 15),
+          padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+          decoration: BoxDecoration(color: backgroundColor4,borderRadius: BorderRadius.circular(12)),
+          child: TextFormField(
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              hintStyle: primaryTextStyle,
+              hintText: 'Kairi Risol',
+              fillColor: backgroundColor4,
+              filled: true,
+              icon: Icon(Icons.person,color: Colors.white,size: 28,),
+            ),
+            style: primaryTextStyle.copyWith(
+                fontWeight: semiBold,
+                fontSize: 18,
+                color: Colors.white
+            ),
+          ),
+        ),
+      );
+    }
+
     Widget Content(){
       return Container(
         width: double.infinity,
@@ -19,7 +116,11 @@ class EditProfile extends StatelessWidget {
                 child: Image.asset('assets/org.png',),
               ),
             ),
-            Text('El Users',style:primaryTextStyle.copyWith(fontWeight: semiBold,fontSize: 30),)
+            Text('El Users',style:primaryTextStyle.copyWith(fontWeight: semiBold,fontSize: 30),),
+            nameInput(),
+            UsernameInput(),
+            EmailInput(),
+            ButtonUpdate(),
           ],
         ),
       );
@@ -47,6 +148,7 @@ class EditProfile extends StatelessWidget {
       appBar: header(),
       backgroundColor: backgroundColor3,
       body: Content(),
+
     );
   }
 }

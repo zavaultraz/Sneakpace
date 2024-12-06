@@ -18,3 +18,4 @@ part 'UI/chat_page.dart';
 part 'UI/wishlist_page.dart';
 part 'UI/detail_chat_page.dart';
 part 'UI/edit_profile.dart';
+part 'UI/product_page.dart';

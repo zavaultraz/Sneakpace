@@ -24,6 +24,7 @@ class MainPage extends StatelessWidget {
         '/main-page' : (context) => MainPages(),
         '/detail-chat' : (context) => DetailChatPage(),
         '/edit-profile' : (context) => EditProfile(),
+        '/product-pages' : (context) => ProductPage(),
 
       },
     );
