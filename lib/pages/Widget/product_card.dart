@@ -1,8 +1,11 @@
 part of 'widget.dart';
 
 class ProductCard extends StatelessWidget {
-  const ProductCard({super.key});
-
+  const ProductCard({super.key, this.text = '', this.image = '',this.category='', final String, required this.price });
+final String text;
+final String image;
+  final int price;
+  final String category;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -37,7 +40,7 @@ class ProductCard extends StatelessWidget {
                   Radius.circular(25),
                 ),
                 image: DecorationImage(
-                  image: AssetImage('assets/image_shoes.png'),
+                  image: AssetImage(image),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -48,14 +51,14 @@ class ProductCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Shoes',
+                    category,
                     style: subtitleTextStyle.copyWith(
                       fontSize: 16,
                       fontWeight: semiBold,
                     ),
                   ),
                   Text(
-                    'Sepatu Gunung ANDO 1500',
+                    text,
                     style: primaryTextStyle.copyWith(
                         color: blackColor, fontSize: 16, fontWeight: semiBold),
                     overflow: TextOverflow.ellipsis,
@@ -63,10 +66,10 @@ class ProductCard extends StatelessWidget {
                   Text(
                     NumberFormat.currency(
                             symbol: 'IDR ', locale: 'id_ID', decimalDigits: 0)
-                        .format(799000),
+                        .format(price),
                     style:
                         priceTextStyle.copyWith(fontSize: 14, fontWeight: bold),
-                  )
+                  ),
                 ],
               ),
             ),

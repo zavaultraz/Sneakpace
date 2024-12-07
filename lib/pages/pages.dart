@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_shop/pages/Widget/widget.dart';
 import 'package:e_shop/shared/shared.dart';
 import 'package:flutter/cupertino.dart';

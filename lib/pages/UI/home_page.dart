@@ -164,9 +164,8 @@ class HomePage extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            ProductCard(),
-            ProductCard(),
-            ProductCard(),
+            ProductCard(price: 100000,text: 'Adidas Runing Shoes', image: 'assets/image_shoes6.png',category: 'shoes',),
+            ProductCard(price: 500000,text: 'Adidas Runing Black Fighter', image: 'assets/image_shoes3.png',category: 'shoes',),
           ],
         ),
       ),
