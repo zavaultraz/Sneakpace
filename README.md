@@ -19,7 +19,7 @@
 ## 🚀 Cara Menjalankan Proyek  
 1. Clone repository ini:  
    ```bash
-   git clone [masukkan link repo]
+   git clone https://github.com/zavaultraz/Sneakpace.git
    cd sneakpace
    ```
 2. Install dependencies:  
