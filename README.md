@@ -15,8 +15,6 @@
 ## 🛠️ Teknologi yang Digunakan  
 - **Flutter** – Framework utama untuk pengembangan aplikasi mobile.  
 - **Dart** – Bahasa pemrograman yang digunakan dalam Flutter.  
-- **Firebase (Opsional)** – Jika menggunakan Firebase untuk autentikasi atau database.  
-- **Provider / Riverpod** – Untuk state management (sesuai pilihan yang digunakan).  
 
 ## 🚀 Cara Menjalankan Proyek  
 1. Clone repository ini:  
@@ -47,8 +45,7 @@ Kontribusi sangat diterima! Jika ingin berkontribusi:
 
 ## 📧 Kontak  
 Jika ada pertanyaan atau ingin berkolaborasi, hubungi saya melalui:  
-📩 Email: [zavazaneta.pi@gmail.com]]  
-🔗 LinkedIn: [https://www.linkedin.com/in/zava-zaneta-760104a2]  
+📩 Email: zavazaneta.pi@gmail.com  
+🔗 LinkedIn: https://www.linkedin.com/in/zava-zaneta-760104a2
 
 💬 **What do you think? Write in the comments column!**  
-✨ **Make your digital dream come true with me!**  
